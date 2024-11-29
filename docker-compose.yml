@@ -11,7 +11,7 @@ services:
       - 45678:45678
       - 32010:32010
     environment:
-      - DREMIO_JAVA_SERVER_EXTRA_OPTS="-Dpaths.dist=file:///opt/dremio/data/dist"
+      - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dpaths.dist=file:///opt/dremio/data/dist
     volumes:
       - dremio:/opt/dremio/data
     deploy:
