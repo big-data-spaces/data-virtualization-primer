@@ -5,7 +5,7 @@
 According to [Wikipedia](https://en.wikipedia.org/wiki/Data_virtualization):
 
 *Data virtualization* is an approach to *data management* that allows an application to *retrieve* and *manipulate* data 
-*without* requiring technical *details* about the data, such as how it is *formatted* at source, or where it is 
+*without* requiring technical *details* about the data, such as *how* it is *formatted* at source, or *where* it is 
 physically *located* [1](https://en.wikipedia.org/wiki/Data_virtualization#cite_note-1) and can provide a single customer view 
 (or single view of any other entity) of the overall data [2](https://en.wikipedia.org/wiki/Data_virtualization#cite_note-2).
 
@@ -20,11 +20,11 @@ physically *located* [1](https://en.wikipedia.org/wiki/Data_virtualization#cite_
 
 ## Advantages of Data Virtualization
 
-- Keeps the control of the source party (department, company)
+- Keeps control by the source party (department, company)
 - Reduces the (even: legal) risk of redundant, old or erroneous data
 - Reduces the workload for copying/moving data
 - Does not presuppose or impose a single data model / schema / format
-- Includes transactional reading and writing
+- Supports transactional reading and writing
 - Allows to analyze across multiple domains
 
 ## Challenges of Data Virtualization
@@ -65,7 +65,7 @@ Publish result sets as views and/or data services executed by client application
 Type in the following command in your terminal
 
 ```console
-docker compose up dremio
+docker compose up
 ```
 
 ![Terminal](img/codespaces_terminal.png)
@@ -95,7 +95,7 @@ Next we will create a source which points to an open dataset
 
 which is located in a public S3 bucket
 
-![Dremio S3 Source](img/dremio-s3.png)
+![Dremio S3 Source](img/dremio_s3.png)
 
 For each source (connection) you can enable various options to optimize the
 scanning (both meta-data and data). These settings allow to specifiy a sweet spot between
@@ -166,3 +166,22 @@ SELECT
  GROUP BY FLOOR("tempmax"/2.0)
  ORDER BY FLOOR("tempmax"/2.0) ASC
  ```
+
+
+## Products and Resources
+
+### Products
+
+- Dremio [https://www.dremio.com/](https://www.dremio.com/) - Hybrid Lakehouse
+for the Business
+- Denodo [https://www.denodo.com](https://www.denodo.com) - Data at the Speed of Business.
+- TIBCO [https://www.tibco.com/](https://www.tibco.com/) - Real-time data fuels the modern enterprise
+- Databricks [https://www.databricks.com/](https://www.databricks.com/) - Your data. Your AI.
+Your future.
+- JBoss Data Virtualization [https://access.redhat.com/products/red-hat-jboss-data-virtualization](https://access.redhat.com/products/red-hat-jboss-data-virtualization)
+
+### Resources
+
+- Apache Drill [https://drill.apache.org/](https://drill.apache.org/) - Schema-free SQL Engine
+- Apache Arrow [https://arrow.apache.org/](https://arrow.apache.org/) - Toolbox for fast data interchange and in-memory analytics
+- Linked Data [https://en.wikipedia.org/wiki/Linked_data](https://en.wikipedia.org/wiki/Linked_data) - Semantic World-Wide Web
